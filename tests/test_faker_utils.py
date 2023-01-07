@@ -1,6 +1,6 @@
 """Test Faker Utils"""
 import pytest
-from datagenie.faker_utils import (
+from datasets_genie.faker_utils import (
     callable_methods,
     get_callable_method_names,
     random_faker_method

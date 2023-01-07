@@ -5,7 +5,7 @@ import sys
 from io import StringIO
 import pytest
 
-from datagenie.csv_generator import generate_csv, generate_data
+from datasets_genie.csv_generator import generate_csv, generate_data
 
 FILE_LOCATION = './tests'
 FILE_NAME = 'test_file.csv'

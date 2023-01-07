@@ -30,21 +30,21 @@ def generate_file_name(file_type: str, file_name: Optional[str] = None,
     else:
         now = datetime.datetime.now()
         formatted_date = now.strftime(date_formatter)
-        file_name = f'datagenie_{formatted_date}'
+        file_name = f'datasets-genie_{formatted_date}'
     return f'{file_name}.{file_type}'
 
 
-def get_datagenie_env():
-    """returns all the env variables related to datagenie"""
+def get_datasets_genie_env():
+    """returns all the env variables related to datasets-genie"""
     env = {}
     for key, value in os.environ.items():
-        if key.startswith('DATAGENIE_'):
+        if key.startswith('DATASETS_GENIE_'):
             env[key] = value
     return env
 
 
 def logger(value, *, debug=True, info=False, error=False):
-    """ logger for datagenie"""
+    """ logger for datasets-genie"""
     if debug:
         logging.getLogger().setLevel(logging.DEBUG)
     if info:

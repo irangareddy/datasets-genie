@@ -1,17 +1,21 @@
 """test utils"""
 import os
 import pytest
-from datagenie.utils import get_datagenie_env, get_file_location, generate_file_name
+from datasets_genie.utils import (
+    get_datasets_genie_env,
+    get_file_location,
+    generate_file_name
+)
 
 
 @pytest.fixture
 def test_utils():
     """fixture for test utils"""
-    os.environ['DATAGENIE_API_KEY'] = 'abc123'
-    os.environ['DATAGENIE_DEBUG'] = 'True'
+    os.environ['DATASETS_GENIE_API_KEY'] = 'abc123'
+    os.environ['DATASETS_GENIE_DEBUG'] = 'True'
     yield
-    del os.environ['DATAGENIE_API_KEY']
-    del os.environ['DATAGENIE_DEBUG']
+    del os.environ['DATASETS_GENIE_API_KEY']
+    del os.environ['DATASETS_GENIE_DEBUG']
 
 
 def test_get_file_location():
@@ -30,14 +34,14 @@ def test_generate_file_name():
     """tests generate file name"""
     # Test default file name
     assert generate_file_name(file_type='csv',
-                              file_name=None).split('_')[0] == 'datagenie'
+                              file_name=None).split('_')[0] == 'datasets-genie'
     # Test file name with extension
     assert generate_file_name('csv',
-                              file_name='datagenie.csv') == 'datagenie.csv'
+                              file_name='datasets-genie.csv') == 'datasets-genie.csv'
 
 
 def test_get_datagenie_env(test_utils):
     """Check that the function returns the correct dictionary"""
-    keys = get_datagenie_env()
-    assert keys['DATAGENIE_API_KEY'] == 'abc123'
-    assert keys['DATAGENIE_DEBUG'] == 'True'
+    keys = get_datasets_genie_env()
+    assert keys['DATASETS_GENIE_API_KEY'] == 'abc123'
+    assert keys['DATASETS_GENIE_DEBUG'] == 'True'

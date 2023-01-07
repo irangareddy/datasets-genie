@@ -2,8 +2,8 @@
 from typing import Optional
 import csv
 import faker
-from datagenie.utils import generate_file_name, get_file_location
-from datagenie.faker_utils import callable_methods, random_faker_method
+from datasets_genie.utils import generate_file_name, get_file_location
+from datasets_genie.faker_utils import callable_methods, random_faker_method
 
 fake = faker.Faker()
 

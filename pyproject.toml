@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "datagenie"
-version = "0.0.0"
+name = "datasets-genie"
+version = "0.1.1"
 license = "Apache-2.0"
 description = "Package for generating fake data in CSV, JSON, and XML formats. It can be used to create placeholder data for testing or demonstration purposes."
 authors = ["Sai Ranga Reddy Nukala <sairangareddy22@gmail.com>"]
