@@ -7,7 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/datasets_genie" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/dist" />
     </content>
-    <orderEntry type="jdk" jdkName="Poetry (datagenie) (4)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Poetry (datasets-genie)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">
