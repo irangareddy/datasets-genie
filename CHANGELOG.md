@@ -6,7 +6,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased]
 
+## [0.1.1] 2022-01-07
+
+### Changed
+
+- Project name to datasets-genie and update all related attributes
+
+## [0.1.0] 2022-01-07
+
 ### Added
 
-- initial version
+- csv generator
 
