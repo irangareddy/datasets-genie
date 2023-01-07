@@ -1,0 +1,8 @@
+# Changes here will be overwritten by Copier
+_commit: v3.4.1
+_src_path: gh:eccenca/cmem-plugin-template
+author_mail: sairangareddy22@gmail.com
+author_name: Sai Ranga Reddy Nukala
+project_description: package for generating fake data in CSV, JSON, and XML formats. It can be used to create placeholder data for testing or demonstration purposes.
+project_slug: datagenie
+
