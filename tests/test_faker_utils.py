@@ -3,14 +3,14 @@ import pytest
 from datasets_genie.faker_utils import (
     callable_methods,
     get_callable_method_names,
-    random_faker_method
+    random_faker_method,
 )
 
 
 @pytest.fixture()
 def methods():
     """get methods"""
-    return ['name', 'address', 'email', 'company', 'profile', 'phone_number']
+    return ["name", "address", "email", "company", "profile", "phone_number"]
 
 
 def test_callable_methods_returns_list_of_strings(methods):

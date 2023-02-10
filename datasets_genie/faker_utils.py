@@ -4,19 +4,28 @@ import secrets
 import logging
 from faker import Faker
 
-fake = Faker('en_US')
+fake = Faker("en_US")
 
 
 def get_callable_method_names() -> list[str]:
     """Returns all the available methods from faker object"""
 
     # exceptional methods are non-callable methods or required some params
-    exceptional_list = ['cache_pattern', 'factories', 'generator_attrs',
-                        'seed', 'locales', 'providers', 'random',
-                        'unique', 'weights']
+    exceptional_list = [
+        "cache_pattern",
+        "factories",
+        "generator_attrs",
+        "seed",
+        "locales",
+        "providers",
+        "random",
+        "unique",
+        "weights",
+    ]
     # filtering methods
-    methods = [obj for obj in dir(fake)
-               if not obj.startswith('__') and not obj.startswith('_')]
+    methods = [
+        obj for obj in dir(fake) if not obj.startswith("__") and not obj.startswith("_")
+    ]
     filtered_list = [x for x in methods if x not in exceptional_list]
     callable_methods_names = []
 
@@ -28,7 +37,7 @@ def get_callable_method_names() -> list[str]:
             if not sig.parameters:
                 callable_methods_names.append(method)
         except AttributeError as attribute_error:
-            logging.error('Error getting method %s: %s', method, attribute_error)
+            logging.error("Error getting method %s: %s", method, attribute_error)
         # except Exception as error:
         #     logging.error('Error getting method %s: %s', method, error)
     return callable_methods_names
