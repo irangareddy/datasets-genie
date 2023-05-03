@@ -1,5 +1,5 @@
 """CSV Generator"""
-from typing import Optional
+from typing import Optional, Set, Any
 import csv
 import faker
 from datasets_genie.utils import generate_file_name, get_file_location
@@ -10,10 +10,10 @@ fake = faker.Faker()
 
 def generate_data(rows: int, columns: int) -> list[list[str]]:
     """Generates data for the CSV file"""
-    keys = []
-    for _ in range(columns):
-        keys.append(random_faker_method())
-    data = [keys]
+    keys: Set[Any] = set()
+    while len(keys) < columns:
+        keys.add(random_faker_method())
+    data = [list(keys)]
     for _ in range(rows):
         data.append(callable_methods(keys))
     return data
